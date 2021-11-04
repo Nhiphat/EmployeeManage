@@ -40,7 +40,7 @@ class CreateEmployeeComponent extends Component {
 
         // step 5
         if(this.state.id === '_add'){
-            EmployeeService.createEmployee(employee).then(res =>{
+            EmployeeService.createEmployee(JSON.stringify(employee)).then(res =>{
                 this.props.history.push('/employees');
             });
         }else{
